@@ -9,8 +9,9 @@
 	<style type="text/css">
 
 		/*ZONA DE IMAGENES*/
+		 /*Características de los botones*/
 		.tablink {
-			background-color: #555;
+			background-color: #444;
 			color: white;
 			float: left;
 			border: none;
@@ -21,16 +22,18 @@
 			width: 25%;
 			font-family: 'Roboto', sans-serif;
 		}
-
+		 /*Cambia el color del botón cuando el ratón está encima*/
 		.tablink:hover {
-			background-color: #777;
+			background-color: #333;
 		}
 
+		 /*Características de las imagenes*/
 		img{
 			height: 20%;
 			width: 100%;
 		}
 
+		 /*Añade un espacio entre el encabezado y las imagenes*/
 		.separado{
 			padding-top: 2%;
 		}
@@ -55,13 +58,15 @@
 		</ul>
 	</div>
 
-	<!--Esto son las IMAGENES que puedes clickar para ir a las atracciones destacadas de forma directa-->
+	<!--Esto son las IMÁGENES que puedes clickar para ir a las atracciones destacadas de forma directa-->
 	<div class="separado">
+		<!--Esto son las IMÁGENES-->
 		<div id="familia1"  class="tabcontent"> <img src="Imagenes/Scroll/familia1.png"></div>
 		<div id="infantil1" class="tabcontent"> <img src="Imagenes/Scroll/infantil1.png"></div>
 		<div id="emolimit1" class="tabcontent"> <img src="Imagenes/Scroll/emolimit1.png"></div>
 		<div id="emolimit2" class="tabcontent"> <img src="Imagenes/Scroll/emolimit2.png"></div>
 
+		<!--Esto son los BOTONES-->
 		<button class="tablink" onclick="abrirMontana('familia1', this, 'red')" id="defaultOpen">Familia1</button>
 		<button class="tablink" onclick="abrirMontana('infantil1', this, 'green')">Infantil1</button>
 		<button class="tablink" onclick="abrirMontana('emolimit1', this, 'blue')">EmoLimit1</button>
@@ -83,7 +88,7 @@
 
 				//Este for deja todos los botones con el color gris
 				for (i = 0; i < tablinks.length; i++) {
-				  tablinks[i].style.backgroundColor = "#333";
+				  tablinks[i].style.backgroundColor = "";
 				}
 
 				document.getElementById(montana).style.display = "block";	//Esta línea muestra solamente la imagen que se le pide
