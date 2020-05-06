@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parque de prueba</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!--Enlace para poder usar una FUENTE de google, en este caso roboto-->
+	<link type="text/css" href="css/basico.css" rel="stylesheet"/>
+
+	<style type="text/css">
+
+		/*ZONA DE IMAGENES*/
+		.tablink {
+			background-color: #555;
+			color: white;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			font-size: 17px;
+			width: 25%;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.tablink:hover {
+			background-color: #777;
+		}
+
+		img{
+			height: 20%;
+			width: 100%;
+		}
+
+		.separado{
+			padding-top: 2%;
+		}
+	</style>
+
+</head>
+<body>
+
+	<!--Esto es el ENCABEZADO que contiene los menús-->
+	<div id="contenidoMenu" > 
+		<ul>
+		  <li><a href="index.html">Inicio</a></li>
+		  <li><a href="entradas.html">Comprar entradas</a></li>
+		  <li class="dropdown">
+		    <a href="atracciones.html" class="dropbtn">Atracciones</a>
+		    <div class="dropdown-content">
+		      <a href="#">Infantiles</a>
+		      <a href="Atracciones/Familia/familia1.html">Familiares</a>
+		      <a href="#">Emocionantes</a>
+		    </div>
+		  </li>
+		</ul>
+	</div>
+
+	<!--Esto son las IMAGENES que puedes clickar para ir a las atracciones destacadas de forma directa-->
+	<div class="separado">
+		<div id="familia1"  class="tabcontent"> <img src="Imagenes/Scroll/familia1.png"></div>
+		<div id="infantil1" class="tabcontent"> <img src="Imagenes/Scroll/infantil1.png"></div>
+		<div id="emolimit1" class="tabcontent"> <img src="Imagenes/Scroll/emolimit1.png"></div>
+		<div id="emolimit2" class="tabcontent"> <img src="Imagenes/Scroll/emolimit2.png"></div>
+
+		<button class="tablink" onclick="abrirMontana('familia1', this, 'red')" id="defaultOpen">Familia1</button>
+		<button class="tablink" onclick="abrirMontana('infantil1', this, 'green')">Infantil1</button>
+		<button class="tablink" onclick="abrirMontana('emolimit1', this, 'blue')">EmoLimit1</button>
+		<button class="tablink" onclick="abrirMontana('emolimit2', this, 'orange')">Emolimit2</button>
+
+		<!--Esta es la FUNCIÓN para que el SCROOL DE IMÁGENES funcione-->
+		<script>
+			//Esta función permite mostrar la imagen que se clicke
+			function abrirMontana(montana,elmnt,color) {
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+
+				//Este for elimina todas las imagenes a mostrar
+				for (i = 0; i < tabcontent.length; i++) {
+				  tabcontent[i].style.display = "none";
+				}
+
+				tablinks = document.getElementsByClassName("tablink");
+
+				//Este for deja todos los botones con el color gris
+				for (i = 0; i < tablinks.length; i++) {
+				  tablinks[i].style.backgroundColor = "#333";
+				}
+
+				document.getElementById(montana).style.display = "block";	//Esta línea muestra solamente la imagen que se le pide
+				elmnt.style.backgroundColor = color;						//Esta línea pone el color que se le pide a el boton
+			}
+			// Clica en el elemento con id defaultOpen
+			document.getElementById("defaultOpen").click();
+
+		</script>
+	</div>
+	<div>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br>aaaa<br></div>
+
+	<!--Esto es la lista de REDES SOCIALES que te lleva a ellas-->
+	<div id="social">
+	  <a href="#" class="redes"><img class="imgRedes" src="Imagenes/Redes/twitter.png"></a>
+	  <a href="#" class="redes"><img class="imgRedes" src="Imagenes/Redes/facebook.png"></a>
+	  <a href="#" class="redes"><img class="imgRedes" src="Imagenes/Redes/google.png"></a>
+	  <a href="#" class="redes"><img class="imgRedes" src="Imagenes/Redes/instagram.png"></a>
+	</div>
+
+</body>
+</html>
